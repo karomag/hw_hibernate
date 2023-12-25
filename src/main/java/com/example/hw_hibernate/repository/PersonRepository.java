@@ -1,4 +1,4 @@
-package com.example.hw_hibernate.repositories;
+package com.example.hw_hibernate.repository;
 
 import com.example.hw_hibernate.entity.Person;
 import jakarta.persistence.EntityManager;
@@ -16,7 +16,7 @@ public class PersonRepository {
 
     public List<Person> getPersonsByCity(String city) {
 
-        return entityManager.createQuery("SELECT p FROM Person p WHERE p.city_of_living = :city", Person.class)
+        return entityManager.createQuery("SELECT p FROM Person p WHERE p.city = :city", Person.class)
                 .setParameter("city", city)
                 .getResultList();
     }
