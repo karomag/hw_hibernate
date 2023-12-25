@@ -16,10 +16,10 @@ public class Person {
     @EmbeddedId
     private PersonPK pk;
 
-    @Column()
-    private String phone_number;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-    @Column()
-    private String city_of_living;
+    @Column(name = "city_of_living")
+    private String city;
 
 }
